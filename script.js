@@ -29,7 +29,7 @@ function nextSlide() {
 function previousSlide() {
     currentSlide--;
 
-    if (currentSlide == 0) {
+    if (currentSlide < 0) {
         currentSlide = slide.length - 1;
     }    
     showSlide(currentSlide);
