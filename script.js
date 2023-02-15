@@ -1,4 +1,5 @@
 let slide = document.querySelectorAll('.images');
+let dots = document.querySelectorAll('.dot');
 let currentSlide = 0;
 
 showSlide(currentSlide);
@@ -7,10 +8,12 @@ function showSlide (n) {
     let slide = document.querySelectorAll('.images');
     for (let i = 0; i < slide.length; i++) {
         slide[i].style.display = "none";
+        dots[i].classList.remove('active');
     }
 
     
     slide[n].style.display = "block";
+    dots[n].classList.add('active');
 }
 
 function nextSlide() {
@@ -32,3 +35,8 @@ function previousSlide() {
     showSlide(currentSlide);
 }
 
+
+function clickSlide(n) {
+    currentSlide = n;
+    showSlide(currentSlide);
+}

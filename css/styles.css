@@ -63,3 +63,28 @@ button:hover {
     from {opacity: .4}
     to {opacity: 1}
   }
+
+.dots {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 45%;
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    width: 10%;
+    background-color: rgb(150, 150, 150, 50%)
+
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px gray solid;
+    background-color: rgb(211, 211, 211, 50%);
+}
+
+.active, .dot:hover {
+    background-color: rgb(88, 88, 88);
+}
